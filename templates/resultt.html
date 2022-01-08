@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title></title>
+</head>
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #FF7C7C;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+      <main>
+          <div class="container">
+              <img style="z-index:-1;position: absolute;left:-20px;margin-top: 20px;width: 100px;" class="img-fluid" src="./assets/shape1.png" alt="">
+              <img style="z-index:-1;position: absolute;right:0px;bottom:0px;margin-top: 20px;width: 100px;" class="img-fluid" src="./assets/shape2.png" alt="">
+                <div class="mx-auto" style="border-radius:10px;z-index:2;width:100%;background-color: #fcfcfc;box-shadow: 0px  4px 10px rgba(38, 52, 87, 0.26);padding-bottom: 90px;margin-top: 5%;">
+                    <div class="row">
+                        <div style="background-color: #1976D2;width: 40px;margin-top: 20px;margin-left:20px;height: 40px;border-radius: 50%;">
+                            <i class="fas fa-arrow-left text-align-center " style="padding-top:12px;color: white;"></i>
+                        </div>
+                    <h3 class="text-center p-4" style="color: #3D416C;">Choose Algorithme to Start</h3>
+                    
+                    </div>
+                    <div class="container mx-auto">
+                    <div class="row " style="justify-content: center;margin-left: 5%;margin-right: 5%;flex-wrap: wrap;">
+                        <button  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: none;cursor: pointer;background-color: #6FB2F1;padding-bottom: 20px;border-radius: 12px;" class="col-md-3 pt-4 mt-4 mx-auto justify-content-center">
+                            <img src="./assets/file1_icon.svg" style="width: 30%;margin-left: 35%;margin-right: 35%;" class="img-fluid mt-2 "   alt="">
+                            <p class="text-center text-white">polynomial</p>
+                        </button>
+                        <div onclick="route(1)" style="cursor: pointer;background-color: #595B75;padding-bottom: 20px;border-radius: 12px;" class="col-md-3 pt-4 mt-4 mx-auto">
+                            <img src="./assets/file2_icon.svg" style="width: 30%;margin-left: 35%;margin-right: 35%;"  class="img-fluid mt-2"   alt="">
+                            <p class="text-center text-white">Dynamic</p>
+                        </div>
+                        <div onclick="route(1)" style="cursor: pointer;background-color: #FF7C7C;padding-bottom: 20px;border-radius: 12px;" class="col-md-3 pt-4 mt-4 mx-auto">
+                            <img src="./assets/file3_icon.svg" style="width: 30%;margin-left: 35%;margin-right: 35%;"  class="img-fluid mt-2"   alt="">
+                            <p class="text-center text-white">Metahuristic</p>
+                        </div>
+                    </div>
+                    <!-- modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Results</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="col">
+                                  <label for="">Time execution</label>
+                                  <p>12.0s</p>
+                              </div>
+                              <div class="col">
+                                <label for="">Result of objectif function</label>
+                                <p>12.0s</p>
+                            </div>
+                            <div class="col">
+                                <label for="">Sequence</label>
+                                <div class="d-flex flex-wrap">
+                                    <!-- {%for ele in results:%} -->
+                                    <div style="height: 40px;padding: 5px;min-width: 40px;text-align: center;margin-right: 5px;margin-top: 5px;background-color: #E1E1E1;border-radius: 12px;">
+                                        <p>{{ele}}</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            </div>
+                            <div class="modal-footer">
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                </div>
+            </div>
+      </main>
+<script>
+    function route(event) {
+        window.location.replace(event)
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
+
